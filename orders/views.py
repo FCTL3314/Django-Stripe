@@ -1,21 +1,19 @@
-import stripe
-from django.conf import settings
-
+from django.views.generic import TemplateView
 from rest_framework.views import APIView
 
-stripe.api_key = settings.STRIPE_SECRET_KEY
+from orders.services import CreateItemStripeSessionID
+
+
+class SuccessOrderTemplateView(TemplateView):
+    template_name = "orders/success_payment.html"
+
+
+class OrderCanceledTemplateView(TemplateView):
+    template_name = "orders/payment_canceled.html"
 
 
 class BuyItemAPIView(APIView):
-    def get(self, request, *args, **kwargs):
-        checkout_session = stripe.checkout.Session.create(
-            line_items=[
-                {
-                    "price": "price_1NsNRXDUiKPkW2SIF4B3fKQT",
-                    "quantity": 1,
-                },
-            ],
-            mode="payment",
-            success_url=settings.DOMAIN_NAME + "/success.html",
-            cancel_url=settings.DOMAIN_NAME + "/cancel.html",
-        )
+
+    @staticmethod
+    def get(request, *args, **kwargs):
+        return CreateItemStripeSessionID(kwargs["id"]).execute()
