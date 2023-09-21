@@ -11,6 +11,7 @@ The project provides the following endpoints:
 
 1. #### Clone or download the repository.
 2. #### Rename .env.dist to .env and populate it with all variables or just leave test ones.
+3. #### Run docker services: `docker-compose up -d`
 
 # 🌄 Demonstration
 
