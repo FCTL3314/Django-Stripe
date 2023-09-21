@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Nikita Solouyou <solovev.nikita.05@gmail.com>"]
 readme = "README.md"
-packages = [{include = "django_stripe"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -12,6 +11,7 @@ django-environ = "^0.11.2"
 django = "^4.2.5"
 stripe = "^6.5.0"
 django-rest-framework = "^0.1.0"
+gunicorn = "^21.2.0"
 
 
 [tool.poetry.group.dev.dependencies]
