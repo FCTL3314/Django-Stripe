@@ -13,7 +13,7 @@ The project is deployed and is available at this link: http://31.129.99.121:8000
 # 💽 Installation
 
 1. #### Clone or download the repository.
-2. #### Rename .env.dist to .env and populate it with all variables or just leave test ones.
+2. #### Rename .env.dist to .env and populate it with all variables.
 3. #### Run docker services: `docker-compose up -d`
 
 # 🌄 Demonstration
