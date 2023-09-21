@@ -13,7 +13,6 @@ class OrderCanceledTemplateView(TemplateView):
 
 
 class BuyItemAPIView(APIView):
-
     @staticmethod
     def get(request, *args, **kwargs):
         return CreateItemStripeSessionID(kwargs["id"]).execute()
