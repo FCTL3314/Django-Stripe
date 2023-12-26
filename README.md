@@ -6,8 +6,6 @@ The project provides the following endpoints:
 * Item detail: /item/{id}/
 * Session id for payment Item: /buy/{id}/
 
-The project is deployed and is available at this link: http://31.129.99.121:8000/items/
-
 > The project was created as a test task.
 
 # 💽 Installation
